@@ -1,0 +1,50 @@
+.compact-shell h1 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.compact-shell .filters {
+  grid-template-columns: 1fr 180px auto;
+}
+
+.four-year-bars {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  gap: 12px;
+  align-items: end;
+  min-height: 300px;
+}
+
+.four-year-bars .bar-fill {
+  background: linear-gradient(180deg, var(--blue), var(--teal));
+}
+
+.amount-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) 130px;
+  gap: 10px;
+  align-items: center;
+}
+
+.amount-row .rank-name {
+  font-size: 0.84rem;
+}
+
+.amount-row .rank-value {
+  color: var(--ink);
+}
+
+tfoot td {
+  position: sticky;
+  bottom: 0;
+  border-top: 2px solid var(--ink);
+  background: #eef2ee;
+  color: var(--ink);
+  font-weight: 850;
+}
+
+@media (max-width: 980px) {
+  .compact-shell .filters,
+  .four-year-bars {
+    grid-template-columns: 1fr;
+  }
+}

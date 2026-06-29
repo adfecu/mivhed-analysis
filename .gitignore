@@ -1,3 +1,6 @@
 dist/
+node_modules/
+.wrangler/
+mivhed-sites-dist.tgz
 dashboard/server.log
 dashboard/server.err.log

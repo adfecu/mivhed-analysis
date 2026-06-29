@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MIVHED Last Four Years Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./last-four-years.css" />
+  </head>
+  <body>
+    <main class="shell compact-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">MIVHED Fideicomiso</p>
+          <h1>Last Four Years</h1>
+        </div>
+        <div class="search-wrap">
+          <label for="builderFilter">Builder</label>
+          <select id="builderFilter"></select>
+        </div>
+      </section>
+
+      <section class="filters" aria-label="Filters">
+        <label>
+          Search
+          <input id="search" type="search" placeholder="Project, province, fiduciary..." />
+        </label>
+        <label>
+          Year
+          <select id="yearFilter"></select>
+        </label>
+        <button id="resetFilters" type="button">Reset</button>
+      </section>
+
+      <section class="metrics" aria-label="Summary metrics">
+        <article>
+          <span>Projects</span>
+          <strong id="projectCount">0</strong>
+        </article>
+        <article>
+          <span>Housing Units</span>
+          <strong id="unitCount">0</strong>
+        </article>
+        <article>
+          <span>Project Cost</span>
+          <strong id="costTotal">RD$0</strong>
+        </article>
+        <article>
+          <span>Compensation</span>
+          <strong id="compTotal">RD$0</strong>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Projects By Year</h2>
+            <span id="yearRange"></span>
+          </div>
+          <div id="yearChart" class="four-year-bars" aria-label="Projects by year"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Top Builders</h2>
+            <span>by amount</span>
+          </div>
+          <div id="builderChart" class="rank-chart"></div>
+        </article>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel-head">
+          <h2>Projects</h2>
+          <span id="tableCount"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-sort="year">Year</th>
+                <th data-sort="project">Project</th>
+                <th data-sort="builder">Builder</th>
+                <th data-sort="province">Province</th>
+                <th data-sort="municipality">Municipality</th>
+                <th data-sort="units">Units</th>
+                <th data-sort="cost">Project Cost</th>
+                <th data-sort="compensation">Compensation</th>
+              </tr>
+            </thead>
+            <tbody id="projectRows"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Total amount for current filter</td>
+                <td id="footerUnits" class="numeric">0</td>
+                <td id="footerCost" class="numeric">RD$0</td>
+                <td id="footerComp" class="numeric">RD$0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="./data.js"></script>
+    <script src="./last-four-years.js"></script>
+  </body>
+</html>
