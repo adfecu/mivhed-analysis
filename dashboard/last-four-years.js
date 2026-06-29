@@ -1,12 +1,15 @@
 const state = {
-  baseRows: [],
+  allRows: [],
   filteredRows: [],
+  availableYears: [],
+  defaultStartYear: 2022,
+  defaultEndYear: 2026,
   sortKey: "year",
   sortDirection: "desc",
 };
 
 const fields = {
-  year: ["Año", "AÃ±o"],
+  year: ["Año", "AÃ±o", "AÃƒÂ±o"],
   project: ["Proyecto"],
   province: ["Provincia"],
   municipality: ["Municipio"],
@@ -14,16 +17,17 @@ const fields = {
   fiduciary: ["Fiduciaria"],
   units: ["Unidades"],
   cost: ["Costo del Proyecto", " Costo del Proyecto "],
-  compensation: ["Compensación", "CompensaciÃ³n"],
+  compensation: ["Compensación", "CompensaciÃ³n", "CompensaciÃƒÂ³n"],
 };
 
-const formatter = new Intl.NumberFormat("en-US");
-const moneyFormatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+const formatter = new Intl.NumberFormat("es-DO");
+const moneyFormatter = new Intl.NumberFormat("es-DO", { maximumFractionDigits: 0 });
 
 const el = {
   builderFilter: document.querySelector("#builderFilter"),
   search: document.querySelector("#search"),
-  yearFilter: document.querySelector("#yearFilter"),
+  startYearFilter: document.querySelector("#startYearFilter"),
+  endYearFilter: document.querySelector("#endYearFilter"),
   resetFilters: document.querySelector("#resetFilters"),
   projectCount: document.querySelector("#projectCount"),
   unitCount: document.querySelector("#unitCount"),
@@ -44,25 +48,32 @@ init();
 function init() {
   const raw = window.MIVHED_DATA;
   const dataset = raw[Object.keys(raw)[0]] || [];
-  const rows = dataset.map(normalizeRow).filter((row) => row.year);
-  const latestYear = Math.max(...rows.map((row) => row.year));
-  const firstYear = latestYear - 3;
+  const rows = dataset.map(normalizeRow).filter((row) => row.year && hasMonetaryData(row));
 
-  state.baseRows = rows.filter((row) => row.year >= firstYear && row.year <= latestYear);
-  el.yearRange.textContent = `${firstYear}-${latestYear}`;
+  assignCanonicalBuilders(rows);
+  state.allRows = rows;
+  state.availableYears = unique(rows.map((row) => row.year)).sort((a, b) => a - b);
+  state.defaultStartYear = state.availableYears.includes(2022) ? 2022 : state.availableYears[0];
+  state.defaultEndYear = state.availableYears.includes(2026) ? 2026 : state.availableYears[state.availableYears.length - 1];
 
-  fillFilters(firstYear, latestYear);
+  fillFilters();
   bindEvents();
   applyFilters();
 }
 
+function hasMonetaryData(row) {
+  return row.cost > 0 || row.compensation > 0;
+}
+
 function normalizeRow(row) {
+  const builderRaw = repairText(get(row, fields.builder)) || "Constructora no especificada";
   const normalized = {
     year: parseInt(get(row, fields.year), 10) || 0,
     project: repairText(get(row, fields.project)),
     province: repairText(get(row, fields.province)),
     municipality: repairText(get(row, fields.municipality)),
-    builder: repairText(get(row, fields.builder)) || "Unknown builder",
+    builderRaw,
+    builderKey: normalizeBuilderKey(builderRaw),
     fiduciary: repairText(get(row, fields.fiduciary)),
     unitsRaw: repairText(get(row, fields.units)),
     cost: parseMoney(get(row, fields.cost)),
@@ -70,18 +81,70 @@ function normalizeRow(row) {
   };
 
   normalized.units = parseLeadingNumber(normalized.unitsRaw);
-  normalized.searchText = [
-    normalized.year,
-    normalized.project,
-    normalized.province,
-    normalized.municipality,
-    normalized.builder,
-    normalized.fiduciary,
-  ]
-    .join(" ")
-    .toLowerCase();
-
   return normalized;
+}
+
+function assignCanonicalBuilders(rows) {
+  const groups = new Map();
+
+  rows.forEach((row) => {
+    const group = groups.get(row.builderKey) || new Map();
+    const label = cleanCompanyLabel(row.builderRaw);
+    group.set(label, (group.get(label) || 0) + 1);
+    groups.set(row.builderKey, group);
+  });
+
+  const labelsByKey = new Map();
+  groups.forEach((labels, key) => {
+    const sorted = [...labels.entries()].sort((a, b) => {
+      if (b[1] !== a[1]) return b[1] - a[1];
+      return b[0].length - a[0].length;
+    });
+    labelsByKey.set(key, sorted[0][0]);
+  });
+
+  rows.forEach((row) => {
+    row.builder = labelsByKey.get(row.builderKey) || row.builderRaw;
+    row.searchText = [
+      row.year,
+      row.project,
+      row.province,
+      row.municipality,
+      row.builder,
+      row.builderRaw,
+      row.fiduciary,
+    ]
+      .join(" ")
+      .toLowerCase();
+  });
+}
+
+function normalizeBuilderKey(value) {
+  return removeDiacritics(cleanCompanyLabel(value))
+    .toUpperCase()
+    .replace(/\bS\s*\.?\s*A\s*\.?\s*S?\b/g, " SAS")
+    .replace(/\bS\s*\.?\s*A\b/g, " SA")
+    .replace(/\bS\s*\.?\s*R\s*\.?\s*L\b/g, " SRL")
+    .replace(/\bC\s*\.?\s*POR\s*A\b/g, " CXA")
+    .replace(/\bC\s*X\s*A\b/g, " CXA")
+    .replace(/\bC\s*\/\s*A\b/g, " CXA")
+    .replace(/&/g, " Y ")
+    .replace(/[.,;:()[\]{}"'`´]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function cleanCompanyLabel(value) {
+  return String(value ?? "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+,/g, ",")
+    .replace(/,\s*/g, ", ")
+    .replace(/\s+\./g, ".")
+    .trim();
+}
+
+function removeDiacritics(value) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function get(row, keys) {
@@ -92,15 +155,16 @@ function get(row, keys) {
 }
 
 function repairText(value) {
-  const text = String(value ?? "").trim();
-  if (!/[ÃÂ]/.test(text)) return text;
-
-  try {
-    const bytes = Uint8Array.from(text, (char) => cp1252Byte(char));
-    return new TextDecoder("utf-8").decode(bytes).replace(/Â/g, "").trim();
-  } catch {
-    return text;
+  let text = String(value ?? "").trim();
+  for (let pass = 0; pass < 2 && /[ÃÂ]/.test(text); pass += 1) {
+    try {
+      const bytes = Uint8Array.from(text, (char) => cp1252Byte(char));
+      text = new TextDecoder("utf-8").decode(bytes).replace(/Â/g, "").trim();
+    } catch {
+      break;
+    }
   }
+  return text;
 }
 
 function cp1252Byte(char) {
@@ -148,31 +212,40 @@ function parseMoney(value) {
   return Number.isFinite(number) ? number : 0;
 }
 
-function fillFilters(firstYear, latestYear) {
-  const years = [];
-  for (let year = latestYear; year >= firstYear; year -= 1) years.push(year);
-
-  fillSelect(el.yearFilter, ["All years", ...years]);
-  fillSelect(el.builderFilter, ["All builders", ...unique(state.baseRows.map((row) => row.builder)).sort()]);
+function fillFilters() {
+  fillSelect(el.startYearFilter, state.availableYears, state.defaultStartYear);
+  fillSelect(el.endYearFilter, state.availableYears, state.defaultEndYear);
+  fillBuilderSelect();
 }
 
-function fillSelect(select, values) {
+function fillSelect(select, values, selectedValue) {
   select.innerHTML = values
-    .map((value, index) => `<option value="${index === 0 ? "" : escapeHtml(value)}">${escapeHtml(value)}</option>`)
+    .map((value) => `<option value="${value}"${value === selectedValue ? " selected" : ""}>${value}</option>`)
     .join("");
 }
 
+function fillBuilderSelect() {
+  const builders = unique(state.allRows.map((row) => row.builder)).sort((a, b) => a.localeCompare(b, "es"));
+  el.builderFilter.innerHTML = [
+    `<option value="">Todas las constructoras</option>`,
+    ...builders.map((builder) => `<option value="${escapeHtml(builder)}">${escapeHtml(builder)}</option>`),
+  ].join("");
+}
+
 function unique(values) {
-  return [...new Set(values.filter(Boolean))];
+  return [...new Set(values.filter((value) => value !== "" && value !== null && value !== undefined))];
 }
 
 function bindEvents() {
-  [el.builderFilter, el.search, el.yearFilter].forEach((input) => input.addEventListener("input", applyFilters));
+  [el.builderFilter, el.search, el.startYearFilter, el.endYearFilter].forEach((input) => {
+    input.addEventListener("input", applyFilters);
+  });
 
   el.resetFilters.addEventListener("click", () => {
     el.builderFilter.value = "";
     el.search.value = "";
-    el.yearFilter.value = "";
+    el.startYearFilter.value = String(state.defaultStartYear);
+    el.endYearFilter.value = String(state.defaultEndYear);
     applyFilters();
   });
 
@@ -185,24 +258,29 @@ function bindEvents() {
         state.sortKey = key;
         state.sortDirection = key === "year" ? "desc" : "asc";
       }
-      renderTable();
+      renderTable(calculateTotals(state.filteredRows));
     });
   });
 }
 
 function applyFilters() {
   const builder = el.builderFilter.value;
-  const year = Number(el.yearFilter.value);
   const query = el.search.value.trim().toLowerCase();
+  const start = Number(el.startYearFilter.value);
+  const end = Number(el.endYearFilter.value);
+  const startYear = Math.min(start, end);
+  const endYear = Math.max(start, end);
 
-  state.filteredRows = state.baseRows.filter((row) => {
+  state.filteredRows = state.allRows.filter((row) => {
     return (
+      row.year >= startYear &&
+      row.year <= endYear &&
       (!builder || row.builder === builder) &&
-      (!year || row.year === year) &&
       (!query || row.searchText.includes(query))
     );
   });
 
+  el.yearRange.textContent = `${startYear}-${endYear}`;
   render();
 }
 
@@ -239,7 +317,7 @@ function renderYearChart() {
   el.yearChart.innerHTML = byYear
     .map(
       (item) => `
-        <div class="bar" title="${item.year}: ${item.count} projects">
+        <div class="bar" title="${item.year}: ${item.count} proyectos">
           <div class="bar-fill" style="height:${Math.max((item.count / max) * 100, 2)}%"></div>
           <div class="bar-value">${item.count}</div>
           <div class="bar-label">${item.year}</div>
@@ -250,7 +328,9 @@ function renderYearChart() {
 }
 
 function groupByYear(rows) {
-  const years = unique(state.baseRows.map((row) => row.year)).sort((a, b) => a - b);
+  const startYear = Math.min(Number(el.startYearFilter.value), Number(el.endYearFilter.value));
+  const endYear = Math.max(Number(el.startYearFilter.value), Number(el.endYearFilter.value));
+  const years = state.availableYears.filter((year) => year >= startYear && year <= endYear);
   return years.map((year) => ({
     year,
     count: rows.filter((row) => row.year === year).length,
@@ -283,13 +363,13 @@ function renderBuilderChart() {
 
 function renderTable(totals) {
   const rows = [...state.filteredRows].sort(compareRows);
-  el.tableCount.textContent = `${formatter.format(rows.length)} matching projects`;
+  el.tableCount.textContent = `${formatter.format(rows.length)} proyectos encontrados`;
   el.footerUnits.textContent = formatter.format(totals.units);
   el.footerCost.textContent = formatMoney(totals.cost);
   el.footerComp.textContent = formatMoney(totals.compensation);
 
   if (!rows.length) {
-    el.projectRows.innerHTML = `<tr><td class="empty" colspan="8">No projects match the current filters.</td></tr>`;
+    el.projectRows.innerHTML = `<tr><td class="empty" colspan="8">No hay proyectos con los filtros actuales.</td></tr>`;
     return;
   }
 
@@ -318,7 +398,7 @@ function compareRows(a, b) {
   const bv = b[key] ?? "";
 
   if (typeof av === "number" && typeof bv === "number") return (av - bv) * direction;
-  return String(av).localeCompare(String(bv), undefined, { numeric: true, sensitivity: "base" }) * direction;
+  return String(av).localeCompare(String(bv), "es", { numeric: true, sensitivity: "base" }) * direction;
 }
 
 function formatMoney(value) {
@@ -326,8 +406,8 @@ function formatMoney(value) {
 }
 
 function formatCompactMoney(value) {
-  if (value >= 1_000_000_000) return `RD$${(value / 1_000_000_000).toFixed(1)}B`;
-  if (value >= 1_000_000) return `RD$${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000_000_000) return `RD$${(value / 1_000_000_000).toLocaleString("es-DO", { maximumFractionDigits: 1 })}B`;
+  if (value >= 1_000_000) return `RD$${(value / 1_000_000).toLocaleString("es-DO", { maximumFractionDigits: 1 })}M`;
   return formatMoney(value);
 }
 

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MIVHED Last Four Years Dashboard</title>
+    <title>Dashboard MIVHED por Rango de Años</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./last-four-years.css" />
   </head>
@@ -11,42 +11,46 @@
     <main class="shell compact-shell">
       <section class="topbar">
         <div>
-          <p class="eyebrow">MIVHED Fideicomiso</p>
-          <h1>Last Four Years</h1>
+          <p class="eyebrow">Fideicomiso MIVHED</p>
+          <h1>Proyectos por rango de años</h1>
         </div>
         <div class="search-wrap">
-          <label for="builderFilter">Builder</label>
+          <label for="builderFilter">Constructora</label>
           <select id="builderFilter"></select>
         </div>
       </section>
 
-      <section class="filters" aria-label="Filters">
+      <section class="filters range-filters" aria-label="Filtros">
         <label>
-          Search
-          <input id="search" type="search" placeholder="Project, province, fiduciary..." />
+          Buscar
+          <input id="search" type="search" placeholder="Proyecto, provincia, fiduciaria..." />
         </label>
         <label>
-          Year
-          <select id="yearFilter"></select>
+          Desde
+          <select id="startYearFilter"></select>
         </label>
-        <button id="resetFilters" type="button">Reset</button>
+        <label>
+          Hasta
+          <select id="endYearFilter"></select>
+        </label>
+        <button id="resetFilters" type="button">Restablecer</button>
       </section>
 
-      <section class="metrics" aria-label="Summary metrics">
+      <section class="metrics" aria-label="Indicadores principales">
         <article>
-          <span>Projects</span>
+          <span>Proyectos</span>
           <strong id="projectCount">0</strong>
         </article>
         <article>
-          <span>Housing Units</span>
+          <span>Unidades</span>
           <strong id="unitCount">0</strong>
         </article>
         <article>
-          <span>Project Cost</span>
+          <span>Costo del proyecto</span>
           <strong id="costTotal">RD$0</strong>
         </article>
         <article>
-          <span>Compensation</span>
+          <span>Compensación</span>
           <strong id="compTotal">RD$0</strong>
         </article>
       </section>
@@ -54,16 +58,16 @@
       <section class="grid">
         <article class="panel">
           <div class="panel-head">
-            <h2>Projects By Year</h2>
+            <h2>Proyectos por año</h2>
             <span id="yearRange"></span>
           </div>
-          <div id="yearChart" class="four-year-bars" aria-label="Projects by year"></div>
+          <div id="yearChart" class="four-year-bars" aria-label="Proyectos por año"></div>
         </article>
 
         <article class="panel">
           <div class="panel-head">
-            <h2>Top Builders</h2>
-            <span>by amount</span>
+            <h2>Principales constructoras</h2>
+            <span>por monto</span>
           </div>
           <div id="builderChart" class="rank-chart"></div>
         </article>
@@ -71,27 +75,27 @@
 
       <section class="panel table-panel">
         <div class="panel-head">
-          <h2>Projects</h2>
+          <h2>Listado de proyectos</h2>
           <span id="tableCount"></span>
         </div>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th data-sort="year">Year</th>
-                <th data-sort="project">Project</th>
-                <th data-sort="builder">Builder</th>
-                <th data-sort="province">Province</th>
-                <th data-sort="municipality">Municipality</th>
-                <th data-sort="units">Units</th>
-                <th data-sort="cost">Project Cost</th>
-                <th data-sort="compensation">Compensation</th>
+                <th data-sort="year">Año</th>
+                <th data-sort="project">Proyecto</th>
+                <th data-sort="builder">Constructora</th>
+                <th data-sort="province">Provincia</th>
+                <th data-sort="municipality">Municipio</th>
+                <th data-sort="units">Unidades</th>
+                <th data-sort="cost">Costo del proyecto</th>
+                <th data-sort="compensation">Compensación</th>
               </tr>
             </thead>
             <tbody id="projectRows"></tbody>
             <tfoot>
               <tr>
-                <td colspan="5">Total amount for current filter</td>
+                <td colspan="5">Total para el filtro actual</td>
                 <td id="footerUnits" class="numeric">0</td>
                 <td id="footerCost" class="numeric">RD$0</td>
                 <td id="footerComp" class="numeric">RD$0</td>
