@@ -7046,8 +7046,8 @@
       "Constructora": "Ceres Trust Dominicana, S.R.L.",
       "Fiduciaria": "Fiduciaria Popular, S.A",
       "Unidades": "64",
-      " Costo del Proyecto ": " 132,596,078,78 ",
-      "CompensaciÃ³n": "11,962,960,36"
+      " Costo del Proyecto ": " 132,596,078.78 ",
+      "CompensaciÃ³n": "11,962,960.36"
     },
     {
       "AÃ±o": "2022",
@@ -7059,8 +7059,8 @@
       "Constructora": "Lopez Vanderhorst Perez Real Estate Investment, S.R.L.",
       "Fiduciaria": "Fiduciaria La Nacional, S.A",
       "Unidades": "3,200",
-      " Costo del Proyecto ": " 9,619,698,508,98 ",
-      "CompensaciÃ³n": "969,769,216,07"
+      " Costo del Proyecto ": " 9,619,698,508.98 ",
+      "CompensaciÃ³n": "969,769,216.07"
     },
     {
       "AÃ±o": "2022",
@@ -9443,7 +9443,7 @@
       "Provincia": "sato domingo ",
       "Municipio": "santo domingo, Norte",
       "Constructora": "SOLUCIONES INTEGRALES A DESARROLLOS INMOBILIARIOS DOMINICANA, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "96",
       " Costo del Proyecto ": "425,594,198.43",
       "CompensaciÃ³n": "32,596,751.96"
@@ -9482,7 +9482,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "NOR-KASA DEVELOPMENTS & CONSTRUCTIONS, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "48",
       " Costo del Proyecto ": "170,391,611.04",
       "CompensaciÃ³n": "9,909,649.84"
@@ -9508,7 +9508,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "CONDOMINIOS Ã“PALO L2P, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "104",
       " Costo del Proyecto ": "317,834,444.65",
       "CompensaciÃ³n": "31,577,232.86"
@@ -9547,7 +9547,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "CONSTRUCTORA RIO PLATA, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "224 (120 actualizadas)",
       " Costo del Proyecto ": "336,235,788.68",
       "CompensaciÃ³n": "37,050,454.67"
@@ -9573,7 +9573,7 @@
       "Provincia": "santo domingo",
       "Municipio": "Boca Chica",
       "Constructora": "CONSTRUCTORA MELO PANIAGUA (COMEPSA), S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "1,096",
       " Costo del Proyecto ": "2,295,706,122.91",
       "CompensaciÃ³n": "244,262,941.04"
@@ -9586,7 +9586,7 @@
       "Provincia": "santiago ",
       "Municipio": "santiago",
       "Constructora": "RESIDENCIAL VISTASOL CENTRO",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "192",
       " Costo del Proyecto ": "761,149,207.20",
       "CompensaciÃ³n": "85,971,553.54"
@@ -9794,7 +9794,7 @@
       "Provincia": "sato domingo ",
       "Municipio": "santo domingo, Norte",
       "Constructora": "SOLUCIONES INTEGRALES A DESARROLLOS INMOBILIARIOS DOMINICANA, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "96",
       " Costo del Proyecto ": "425,594,198.43",
       "CompensaciÃ³n": "32,596,751.96"
@@ -9833,7 +9833,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "NOR-KASA DEVELOPMENTS & CONSTRUCTIONS, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "48",
       " Costo del Proyecto ": "170,391,611.04",
       "CompensaciÃ³n": "9,909,649.84"
@@ -9859,7 +9859,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "CONDOMINIOS Ã“PALO L2P, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "104",
       " Costo del Proyecto ": "317,834,444.65",
       "CompensaciÃ³n": "31,577,232.86"
@@ -9898,7 +9898,7 @@
       "Provincia": "santo domingo",
       "Municipio": "santo domingo, Norte",
       "Constructora": "CONSTRUCTORA RIO PLATA, S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "224 (120 actualizadas)",
       " Costo del Proyecto ": "336,235,788.68",
       "CompensaciÃ³n": "37,050,454.67"
@@ -9924,7 +9924,7 @@
       "Provincia": "santo domingo",
       "Municipio": "Boca Chica",
       "Constructora": "CONSTRUCTORA MELO PANIAGUA (COMEPSA), S.R.L.",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "1,096",
       " Costo del Proyecto ": "2,295,706,122.91",
       "CompensaciÃ³n": "244,262,941.04"
@@ -9937,7 +9937,7 @@
       "Provincia": "santiago ",
       "Municipio": "santiago",
       "Constructora": "RESIDENCIAL VISTASOL CENTRO",
-      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
       "Unidades": "192",
       " Costo del Proyecto ": "761,149,207.20",
       "CompensaciÃ³n": "85,971,553.54"
