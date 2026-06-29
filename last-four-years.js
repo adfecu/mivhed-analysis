@@ -337,7 +337,7 @@ function renderBuilderChart() {
     builders.set(row.builder, current);
   });
 
-  const rows = [...builders.values()].sort((a, b) => b.cost - a.cost).slice(0, 8);
+  const rows = [...builders.values()].sort((a, b) => b.cost - a.cost).slice(0, 20);
   const max = Math.max(...rows.map((item) => item.cost), 1);
   el.builderChart.innerHTML = rows
     .map(
