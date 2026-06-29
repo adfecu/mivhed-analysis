@@ -397,8 +397,9 @@ function formatMoney(value) {
 }
 
 function formatCompactMoney(value) {
-  if (value >= 1_000_000_000) return `RD$${(value / 1_000_000_000).toLocaleString("es-DO", { maximumFractionDigits: 1 })}B`;
-  if (value >= 1_000_000) return `RD$${(value / 1_000_000).toLocaleString("es-DO", { maximumFractionDigits: 1 })}M`;
+  if (value >= 1_000_000) {
+    return `RD$${(value / 1_000_000).toLocaleString("es-DO", { maximumFractionDigits: 0 })}M`;
+  }
   return formatMoney(value);
 }
 
