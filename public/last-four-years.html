@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard MIVHED por Rango de Años</title>
+    <title>Dashboard MIVHED - Últimos Cuatro Años</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./last-four-years.css" />
   </head>
@@ -12,7 +12,7 @@
       <section class="topbar">
         <div>
           <p class="eyebrow">Fideicomiso MIVHED</p>
-          <h1>Proyectos por rango de años</h1>
+          <h1>Últimos cuatro años</h1>
         </div>
         <div class="search-wrap">
           <label for="builderFilter">Constructora</label>
@@ -26,12 +26,8 @@
           <input id="search" type="search" placeholder="Proyecto, provincia, fiduciaria..." />
         </label>
         <label>
-          Desde
-          <select id="startYearFilter"></select>
-        </label>
-        <label>
-          Hasta
-          <select id="endYearFilter"></select>
+          Año
+          <select id="yearFilter"></select>
         </label>
         <button id="resetFilters" type="button">Restablecer</button>
       </section>

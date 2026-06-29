@@ -2,8 +2,6 @@ const state = {
   allRows: [],
   filteredRows: [],
   availableYears: [],
-  defaultStartYear: 2022,
-  defaultEndYear: 2026,
   sortKey: "year",
   sortDirection: "desc",
 };
@@ -26,8 +24,7 @@ const moneyFormatter = new Intl.NumberFormat("es-DO", { maximumFractionDigits: 0
 const el = {
   builderFilter: document.querySelector("#builderFilter"),
   search: document.querySelector("#search"),
-  startYearFilter: document.querySelector("#startYearFilter"),
-  endYearFilter: document.querySelector("#endYearFilter"),
+  yearFilter: document.querySelector("#yearFilter"),
   resetFilters: document.querySelector("#resetFilters"),
   projectCount: document.querySelector("#projectCount"),
   unitCount: document.querySelector("#unitCount"),
@@ -51,10 +48,9 @@ function init() {
   const rows = dataset.map(normalizeRow).filter((row) => row.year && hasMonetaryData(row));
 
   assignCanonicalBuilders(rows);
-  state.allRows = rows;
-  state.availableYears = unique(rows.map((row) => row.year)).sort((a, b) => a - b);
-  state.defaultStartYear = state.availableYears.includes(2022) ? 2022 : state.availableYears[0];
-  state.defaultEndYear = state.availableYears.includes(2026) ? 2026 : state.availableYears[state.availableYears.length - 1];
+  const allYears = unique(rows.map((row) => row.year)).sort((a, b) => a - b);
+  state.availableYears = allYears.slice(-4);
+  state.allRows = rows.filter((row) => state.availableYears.includes(row.year));
 
   fillFilters();
   bindEvents();
@@ -213,15 +209,18 @@ function parseMoney(value) {
 }
 
 function fillFilters() {
-  fillSelect(el.startYearFilter, state.availableYears, state.defaultStartYear);
-  fillSelect(el.endYearFilter, state.availableYears, state.defaultEndYear);
+  fillYearSelect();
   fillBuilderSelect();
 }
 
-function fillSelect(select, values, selectedValue) {
-  select.innerHTML = values
-    .map((value) => `<option value="${value}"${value === selectedValue ? " selected" : ""}>${value}</option>`)
-    .join("");
+function fillYearSelect() {
+  el.yearFilter.innerHTML = [
+    `<option value="">Todos los años</option>`,
+    ...state.availableYears
+      .slice()
+      .sort((a, b) => b - a)
+      .map((year) => `<option value="${year}">${year}</option>`),
+  ].join("");
 }
 
 function fillBuilderSelect() {
@@ -237,15 +236,14 @@ function unique(values) {
 }
 
 function bindEvents() {
-  [el.builderFilter, el.search, el.startYearFilter, el.endYearFilter].forEach((input) => {
+  [el.builderFilter, el.search, el.yearFilter].forEach((input) => {
     input.addEventListener("input", applyFilters);
   });
 
   el.resetFilters.addEventListener("click", () => {
     el.builderFilter.value = "";
     el.search.value = "";
-    el.startYearFilter.value = String(state.defaultStartYear);
-    el.endYearFilter.value = String(state.defaultEndYear);
+    el.yearFilter.value = "";
     applyFilters();
   });
 
@@ -266,21 +264,17 @@ function bindEvents() {
 function applyFilters() {
   const builder = el.builderFilter.value;
   const query = el.search.value.trim().toLowerCase();
-  const start = Number(el.startYearFilter.value);
-  const end = Number(el.endYearFilter.value);
-  const startYear = Math.min(start, end);
-  const endYear = Math.max(start, end);
+  const selectedYear = Number(el.yearFilter.value);
 
   state.filteredRows = state.allRows.filter((row) => {
     return (
-      row.year >= startYear &&
-      row.year <= endYear &&
+      (!selectedYear || row.year === selectedYear) &&
       (!builder || row.builder === builder) &&
       (!query || row.searchText.includes(query))
     );
   });
 
-  el.yearRange.textContent = `${startYear}-${endYear}`;
+  el.yearRange.textContent = `${state.availableYears[0]}-${state.availableYears[state.availableYears.length - 1]}`;
   render();
 }
 
@@ -328,10 +322,7 @@ function renderYearChart() {
 }
 
 function groupByYear(rows) {
-  const startYear = Math.min(Number(el.startYearFilter.value), Number(el.endYearFilter.value));
-  const endYear = Math.max(Number(el.startYearFilter.value), Number(el.endYearFilter.value));
-  const years = state.availableYears.filter((year) => year >= startYear && year <= endYear);
-  return years.map((year) => ({
+  return state.availableYears.map((year) => ({
     year,
     count: rows.filter((row) => row.year === year).length,
   }));
