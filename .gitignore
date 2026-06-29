@@ -1,0 +1,3 @@
+dist/
+dashboard/server.log
+dashboard/server.err.log
