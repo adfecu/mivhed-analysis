@@ -1,6 +1,3 @@
-dist/
 node_modules/
+dist/
 .wrangler/
-mivhed-sites-dist.tgz
-dashboard/server.log
-dashboard/server.err.log
