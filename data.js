@@ -1,4 +1,4 @@
-window.MIVHED_DATA = {
+﻿window.MIVHED_DATA = {
   "Pr.Fideicomiso MIVHED 2013-2026": [
     {
       "AÃ±o": "2013",
@@ -5807,6 +5807,19 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2021",
+      "Fecha de Entrada": "06/08/2021",
+      "Fecha de Salida": "03/09/2021",
+      "Proyecto": "Residencial Paraiso Dorado",
+      "Provincia": "Puerto Plata",
+      "Municipio": "Puerto Plata",
+      "Constructora": "DM & R, S.R.L.",
+      "Fiduciaria": "Fiduciaria Dominicana FIDOM, S.A",
+      " Costo del Proyecto ": "314,535,531.89",
+      "CompensaciÃ³n": "35,208,613.46",
+      "Â¿Aprobado?": "Sustituido"
+    },
+    {
+      "AÃ±o": "2021",
       "Fecha de Entrada": "26/08/2021",
       "Fecha de Salida": "03/09/2021",
       "Proyecto": "Residencial Camino Verde, Ciudad Juan Bosch Lote 09-27-01",
@@ -6737,6 +6750,19 @@ window.MIVHED_DATA = {
       "Unidades": "301",
       " Costo del Proyecto ": "818,721,924.90",
       "CompensaciÃ³n": "69,998,369.75"
+    },
+    {
+      "AÃ±o": "2022",
+      "Fecha de Entrada": "04/01/2022",
+      "Fecha de Salida": "07/04/2022",
+      "Proyecto": "Residencial Las Dahlias",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Santo Domingo, Este",
+      "Constructora": "Ingeplan, E.I.R.L.",
+      "Fiduciaria": "Fiducorp, Servicios Fiduciarios Corporativos, S.A",
+      "Unidades": "208",
+      " Costo del Proyecto ": "499,695,452.89",
+      "CompensaciÃ³n": "51,274,742.70"
     },
     {
       "AÃ±o": "2022",
@@ -8746,6 +8772,17 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2023",
+      "Fecha de Salida": "11/08/2023",
+      "Proyecto": "Pravalta Residences ",
+      "Provincia": "La Altagracia",
+      "Municipio": "Higuey",
+      "Constructora": "Right Construction, S.R.L.",
+      "Fiduciaria": "Fiduciaria Popular S.A.",
+      " Costo del Proyecto ": "3,745,381,609.14",
+      "Â¿Aprobado?": "Sustituido"
+    },
+    {
+      "AÃ±o": "2023",
       "Fecha de Entrada": "14/06/2023",
       "Fecha de Salida": "14/08/2023",
       "Proyecto": "Residencial Rivera Verde",
@@ -8795,6 +8832,18 @@ window.MIVHED_DATA = {
       "Unidades": "160",
       " Costo del Proyecto ": "438,656,208.04",
       "CompensaciÃ³n": "37,554,895.15"
+    },
+    {
+      "AÃ±o": "2023",
+      "Fecha de Entrada": "09/08/2023",
+      "Fecha de Salida": "08/09/2023",
+      "Proyecto": "Residencial Manoguayabo 152",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Santo Domingo, Oeste",
+      "Constructora": "Ayala Lopez construcciones y proyectos, S.R.L",
+      "Fiduciaria": "Fiduciaria La Nacional, S.A. ",
+      " Costo del Proyecto ": "906,376,294.54",
+      "Â¿Aprobado?": "Sustituido"
     },
     {
       "AÃ±o": "2023",
@@ -8912,6 +8961,18 @@ window.MIVHED_DATA = {
       "Unidades": "832",
       " Costo del Proyecto ": "2,049,083,132.43",
       "CompensaciÃ³n": "239,423,196.62"
+    },
+    {
+      "AÃ±o": "2023",
+      "Fecha de Entrada": "14/08/2023",
+      "Fecha de Salida": "02/10/2023",
+      "Proyecto": "Ciudad Real Ecologica",
+      "Provincia": "Santo Domingo",
+      "Municipio": "San Antonio De Guerra",
+      "Constructora": "HARBOUR CIUDAD ECOLÃ“GICA, S.R.L.",
+      "Fiduciaria": "Fiducorp, S.A.",
+      " Costo del Proyecto ": "22,860,347,209.74",
+      "Â¿Aprobado?": "Sustituido"
     },
     {
       "AÃ±o": "2023",
@@ -9351,6 +9412,18 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2024",
+      "Fecha de Entrada": "28/09/2023",
+      "Fecha de Salida": "08/01/2024",
+      "Proyecto": "RESIDENCIAL PRADERAS DEL NORTE, FAMILIA FELIZ",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Oeste",
+      "Constructora": "ALOGARY ENTERPRISE, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA  RESERVAS, S.A.",
+      " Costo del Proyecto ": "1,209,711,190.03",
+      "Â¿Aprobado?": "Sustituido"
+    },
+    {
+      "AÃ±o": "2024",
       "Fecha de Entrada": "30/10/2023",
       "Fecha de Salida": "10/01/2024",
       "Proyecto": "PRADERAS DEL JAYA, FAMILIA FELIZ ",
@@ -9663,6 +9736,32 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2024",
+      "Fecha de Entrada": "10/10/2023",
+      "Fecha de Salida": "04/01/2024",
+      "Proyecto": "RESIDENCIAL BRISAS DEL PARQUE",
+      "Provincia": "Distrito Nacional",
+      "Municipio": "Distrito Nacional",
+      "Constructora": "BRUNES INVESTMENTS, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA UNIVERSAL, S.A.",
+      "Unidades": "64(48 actualizadas)",
+      " Costo del Proyecto ": "167,736,277.34",
+      "CompensaciÃ³n": "16,186,206.51"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "11/02/2023",
+      "Fecha de Salida": "05/01/2024",
+      "Proyecto": "RESIDENCIAL JACAGUA B & B",
+      "Provincia": "santiago ",
+      "Municipio": "santiago",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      "Unidades": "792",
+      " Costo del Proyecto ": "2,057,488,399.34",
+      "CompensaciÃ³n": "206,375,659.56"
+    },
+    {
+      "AÃ±o": "2024",
       "Fecha de Entrada": "28/09/2023",
       "Fecha de Salida": "08/01/2024",
       "Proyecto": "RESIDENCIAL PRADERAS DEL NORTE, FAMILIA FELIZ",
@@ -9673,6 +9772,318 @@ window.MIVHED_DATA = {
       "Unidades": "830 (535 actualizadas)",
       " Costo del Proyecto ": "1,209,711,190.03",
       "CompensaciÃ³n": "136,514,096.76"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "30/10/2023",
+      "Fecha de Salida": "10/01/2024",
+      "Proyecto": "PRADERAS DEL JAYA, FAMILIA FELIZ ",
+      "Provincia": "duarte",
+      "Municipio": "san francisco de macoris  ",
+      "Constructora": "HASIR CONSTRUCCIÃ“N, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA POPULAR, S.A",
+      "Unidades": "80 (72 actualizadas)",
+      " Costo del Proyecto ": "165,910,839.36",
+      "CompensaciÃ³n": "15,284,828.84"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "02/11/2023",
+      "Fecha de Salida": "12/01/2024",
+      "Proyecto": "RESIDENCIAL PRADO ALTO VILLA MELLA",
+      "Provincia": "sato domingo ",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "SOLUCIONES INTEGRALES A DESARROLLOS INMOBILIARIOS DOMINICANA, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "96",
+      " Costo del Proyecto ": "425,594,198.43",
+      "CompensaciÃ³n": "32,596,751.96"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "12/07/2023",
+      "Fecha de Salida": "16/01/2024",
+      "Proyecto": "RESIDENCIAL CAMINO VERDE, C.J.B, LOTE 09-27-01",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "CONSTRUCTORA AG-KSI, S.R.L.",
+      "Fiduciaria": "SOCIEDAD FIDUCIARIA GLOBAL, S.A.",
+      "Unidades": "1,264 (816 actualizadas)",
+      " Costo del Proyecto ": "1,848,421,017.60",
+      "CompensaciÃ³n": "197,517,514.96"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "08/01/2024",
+      "Fecha de Salida": "18/01/2024",
+      "Proyecto": "RESIDENCIAL MARIA LUCIA I",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "JMLS DEVELOPMENTS",
+      "Fiduciaria": "FIDUCIARIA POLULAR, S.A.",
+      "Unidades": "24",
+      " Costo del Proyecto ": "92,103,761.88",
+      "CompensaciÃ³n": "6,907,568.65"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "28/11/2023",
+      "Fecha de Salida": "18/01/2024",
+      "Proyecto": "SERENITY RESIDENCE",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "NOR-KASA DEVELOPMENTS & CONSTRUCTIONS, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "48",
+      " Costo del Proyecto ": "170,391,611.04",
+      "CompensaciÃ³n": "9,909,649.84"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "3/10/20223",
+      "Fecha de Salida": "25/01/2024",
+      "Proyecto": "CANAS DEL ESTE",
+      "Provincia": "la altagracia ",
+      "Municipio": "higuey ",
+      "Constructora": "DISDOM, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA UNIVERSAL, S.A.",
+      "Unidades": "636",
+      " Costo del Proyecto ": "2,009,843,621.75",
+      "CompensaciÃ³n": "208,475,259.66"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "08/09/2023",
+      "Fecha de Salida": "26/01/2024",
+      "Proyecto": "RESIDENCIAL Ã“PALO 4 EL EDÃ‰N, 1RA ETAPA",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "CONDOMINIOS Ã“PALO L2P, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "104",
+      " Costo del Proyecto ": "317,834,444.65",
+      "CompensaciÃ³n": "31,577,232.86"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "27/07/2023",
+      "Fecha de Salida": "30/01/2024",
+      "Proyecto": "LOS TRES RÃOS, FAMILIA FELIZ",
+      "Provincia": "Distrito Nacional",
+      "Municipio": "Distrito Nacional",
+      "Constructora": "APPI APLICACIONES DE PINTURAS, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA IN COMMENDAM, S.A.",
+      "Unidades": "48",
+      " Costo del Proyecto ": "78,458,244.48",
+      "CompensaciÃ³n": "7,424,909.80"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "27/07/2023",
+      "Fecha de Salida": "30/01/2024",
+      "Proyecto": "ANNCO I",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "CONSTRUCTORA MEPIME, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA UNIÃ“N CORPORATIVA, FIDUNIÃ“N, S.A.",
+      "Unidades": "40",
+      " Costo del Proyecto ": "171,146,048.00",
+      "CompensaciÃ³n": "17,341,109.76"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "03/11/2023",
+      "Fecha de Salida": "01/02/2024",
+      "Proyecto": "RESIDENCIAL JARDINES DE LA COLONIA (3-4TA. ETAPA)",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "CONSTRUCTORA RIO PLATA, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "224 (120 actualizadas)",
+      " Costo del Proyecto ": "336,235,788.68",
+      "CompensaciÃ³n": "37,050,454.67"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "18/12/2023",
+      "Fecha de Salida": "01/02/2024",
+      "Proyecto": "VALVAREZ RESIDENCES",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "PEDRO MANUEL ÃLVAREZ MARTINEZ",
+      "Fiduciaria": "FIDUCIARIA  RESERVAS, S.A.",
+      "Unidades": "100",
+      " Costo del Proyecto ": "295,506,240.00",
+      "CompensaciÃ³n": "31,232,576.80"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "30/11/2023",
+      "Fecha de Salida": "02/02/2024",
+      "Proyecto": "BOCA RESIDENCE, FAMILIA FELIZ",
+      "Provincia": "santo domingo",
+      "Municipio": "Boca Chica",
+      "Constructora": "CONSTRUCTORA MELO PANIAGUA (COMEPSA), S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "1,096",
+      " Costo del Proyecto ": "2,295,706,122.91",
+      "CompensaciÃ³n": "244,262,941.04"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "17/01/2024",
+      "Fecha de Salida": "06/02/2024",
+      "Proyecto": "RESIDENCIAL VISTASOL CENTRO",
+      "Provincia": "santiago ",
+      "Municipio": "santiago",
+      "Constructora": "RESIDENCIAL VISTASOL CENTRO",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.,",
+      "Unidades": "192",
+      " Costo del Proyecto ": "761,149,207.20",
+      "CompensaciÃ³n": "85,971,553.54"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "04/01/2024",
+      "Fecha de Salida": "07/02/2024",
+      "Proyecto": "EL SEMBRADOR IX-X C.J.B(LOTES 01-01-04 y 01-01-05",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      "Unidades": "472",
+      " Costo del Proyecto ": "1,210,324,854.24",
+      "CompensaciÃ³n": "120,644,828.73"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "16/01/2024",
+      "Fecha de Salida": "08/02/2024",
+      "Proyecto": "VILLAS DEL CENTRO VII",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Oeste",
+      "Constructora": "VENTAS E INVERSIONES, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA POPULAR, S.A",
+      "Unidades": "60",
+      " Costo del Proyecto ": "173,201,869.68",
+      "CompensaciÃ³n": "11,875,177.63"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "26/01/2024",
+      "Fecha de Salida": "13/02/2024",
+      "Proyecto": "RESIDENCIAL HATO NUEVO IV, FAMILIA FELIZ",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Oeste",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      "Unidades": "1,008 (608 actualizadas)",
+      " Costo del Proyecto ": "1,214,486,460.05",
+      "CompensaciÃ³n": "140,307,312.41"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "27/07/2023",
+      "Fecha de Salida": "13/02/2024",
+      "Proyecto": "RESIDENCIAL BOSQUE DE AMATISTA II",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Oeste",
+      "Constructora": "COLLECTION CONSTRUCTION S.R.L.",
+      "Fiduciaria": "FIDUCIARIA POPULAR, S.A",
+      "Unidades": "48",
+      " Costo del Proyecto ": "181,574,866.80",
+      "CompensaciÃ³n": "13,629,974.40"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "14/02/2024",
+      "Fecha de Salida": "15/02/2024",
+      "Proyecto": "CORALES DEL CARIBE ETAPA 2",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "GRUPO LAURUS, S. R. L.",
+      "Fiduciaria": "FIDUCIARIA BHD, S.A.",
+      "Unidades": "432",
+      " Costo del Proyecto ": "1,383,579,545.76",
+      "CompensaciÃ³n": "98,444,032.78"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "15/02/2024",
+      "Fecha de Salida": "15/02/2024",
+      "Proyecto": "CORALES DEL CARIBE ETAPA 3",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "GRUPO LAURUS, S. R. L.",
+      "Fiduciaria": "FIDUCIARIA BHD, S.A.",
+      "Unidades": "432",
+      " Costo del Proyecto ": "1,383,579,545.76",
+      "CompensaciÃ³n": "98,444,032.78"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "02/11/2024",
+      "Fecha de Salida": "28/02/2024",
+      "Proyecto": "RESIDENCIAL ACACIAS DUPLEX",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "CONSTRUCTORA DERCO, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA  RESERVAS, S.A.",
+      "Unidades": "756",
+      " Costo del Proyecto ": "1,833,701,969.05",
+      "CompensaciÃ³n": "184,159,374.66"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "11/11/2023",
+      "Fecha de Salida": "08/03/2024",
+      "Proyecto": "RESIDENCIAL HORIZONTES",
+      "Provincia": "san cristobal ",
+      "Municipio": "san cristobal ",
+      "Constructora": "GODIAM BUSINESS GROUP, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA  RESERVAS, S.A.",
+      "Unidades": "88",
+      " Costo del Proyecto ": "249,349,197.96",
+      "CompensaciÃ³n": "25,988,308.66"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "22/02/2024",
+      "Fecha de Salida": "08/03/2024",
+      "Proyecto": "RESIDENCIAL BALCONES DE QUITA SUEÃ‘O, FAMILIA FELIZ",
+      "Provincia": "san cristobal ",
+      "Municipio": "Haina",
+      "Constructora": "THOMAS & LUTHJE CONSTRUCTORA E INVERSIONES, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA  RESERVAS, S.A.",
+      "Unidades": "300",
+      " Costo del Proyecto ": "632,291,938.50",
+      "CompensaciÃ³n": "71,096,735.23"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "12/03/2024",
+      "Fecha de Salida": "12/03/2024",
+      "Proyecto": "RESIDENCIAL A & O II",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "PROMOTORA A & O, S.A.S.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      "Unidades": "40",
+      " Costo del Proyecto ": "143,985,411.73",
+      "CompensaciÃ³n": "32,470,115.21"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "04/03/2024",
+      "Fecha de Salida": "12/03/2024",
+      "Proyecto": "RESIDENCIAL LUZMAR",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Este ",
+      "Constructora": "INVERSIONES JCPIM, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA POPULAR, S.A",
+      "Unidades": "40",
+      " Costo del Proyecto ": "162,910,556.29",
+      "CompensaciÃ³n": "17,758,370.41"
     },
     {
       "AÃ±o": "2024",
@@ -9751,6 +10162,17 @@ window.MIVHED_DATA = {
       "Unidades": "48",
       " Costo del Proyecto ": "177,896,724.60",
       "CompensaciÃ³n": "19,559,232.60"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "17/04/2024",
+      "Fecha de Salida": "17/04/2024",
+      "Proyecto": "COMFORT SUITES",
+      "Provincia": "la altagracia ",
+      "Municipio": "higuey ",
+      "Constructora": "GREENYARD INVESTMENTS, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL, S.A.",
+      "Â¿Aprobado?": " sustituido "
     },
     {
       "AÃ±o": "2024",
@@ -9917,6 +10339,17 @@ window.MIVHED_DATA = {
       "Unidades": "320",
       " Costo del Proyecto ": "607,055,128.85",
       "CompensaciÃ³n": "65,810,591.13"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "17/05/2024",
+      "Fecha de Salida": "06/06/2024",
+      "Proyecto": "JARDINES DEL ARROYO",
+      "Provincia": "santo domingo",
+      "Municipio": "santo domingo, Norte",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.R.L.",
+      "Fiduciaria": "FIDUCORP, S.A. ",
+      "Â¿Aprobado?": " sustituido "
     },
     {
       "AÃ±o": "2024",
@@ -10374,6 +10807,19 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2024",
+      "Fecha de Entrada": "01/07/2024",
+      "Fecha de Salida": "26/09/2024",
+      "Proyecto": "SABANA DEL YAQUE, FAMILIA FELIZ",
+      "Provincia": "santiago ",
+      "Municipio": "santiago",
+      "Constructora": "CONSTRUCTORA FERNÃNDEZ CORONA, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA RESERVAS, S.A. ",
+      "Unidades": "328",
+      " Costo del Proyecto ": "543,309,028.32",
+      "CompensaciÃ³n": "59,464,124.02"
+    },
+    {
+      "AÃ±o": "2024",
       "Fecha de Entrada": "01/08/2024",
       "Fecha de Salida": "11/10/2024",
       "Proyecto": "GARDEN LIFE RESIDENCES AT BOCA CHICA",
@@ -10397,6 +10843,19 @@ window.MIVHED_DATA = {
       "Unidades": "576",
       " Costo del Proyecto ": "1,963,607,544.10",
       "CompensaciÃ³n": "177,457,259.16"
+    },
+    {
+      "AÃ±o": "2024",
+      "Fecha de Entrada": "17/05/2024",
+      "Fecha de Salida": "27/09/2024",
+      "Proyecto": "RESIDENCIAL MONSEÃ‘OR NOUEL, 1ERA. ETAPA, FAMILIA FELIZ",
+      "Provincia": "monseÃ±or nouel ",
+      "Municipio": "bonao",
+      "Constructora": "CONSTRUCTORA NUEVARENAS, S.R.L",
+      "Fiduciaria": "HTS FIDUCIARIA, S.A",
+      "Unidades": "200",
+      " Costo del Proyecto ": "425,265,664.00",
+      "CompensaciÃ³n": "44,527,449.70"
     },
     {
       "AÃ±o": "2024",
@@ -10774,6 +11233,18 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2025",
+      "Fecha de Entrada": "12/26/24",
+      "Fecha de Salida": "2/14/25",
+      "Proyecto": "RESIDENCIAL BIHACA",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Boca Chica ",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      " Costo del Proyecto ": "3593720287.02",
+      "Â¿Aprobado?": "sustituido"
+    },
+    {
+      "AÃ±o": "2025",
       "Fecha de Entrada": "1/7/25",
       "Fecha de Salida": "2/25/25",
       "Proyecto": "ARQ. PABLO MELLA MORALES II, FAMILIA FELIZ",
@@ -11050,6 +11521,18 @@ window.MIVHED_DATA = {
     },
     {
       "AÃ±o": "2025",
+      "Fecha de Entrada": "5/21/25",
+      "Fecha de Salida": "5/20/25",
+      "Proyecto": "RESIDENCIAL CASA CORAL ETAPA 2-A",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Santo Domingo, Este",
+      "Constructora": "CONSTRUCTORA OV, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
+      " Costo del Proyecto ": "1930298747.52",
+      "Â¿Aprobado?": "sustituido"
+    },
+    {
+      "AÃ±o": "2025",
       "Fecha de Entrada": "9/3/24",
       "Fecha de Salida": "5/23/25",
       "Proyecto": "HATO NUEVO VI, FAMILIA FELIZ",
@@ -11187,6 +11670,18 @@ window.MIVHED_DATA = {
       "Unidades": "25",
       " Costo del Proyecto ": "90434618.00",
       "CompensaciÃ³n": "8500389.382"
+    },
+    {
+      "AÃ±o": "2025",
+      "Fecha de Entrada": "4/21/25",
+      "Fecha de Salida": "6/30/25",
+      "Proyecto": "PASEO LOS ALMENDROS ",
+      "Provincia": "Peravia",
+      "Municipio": "Bani",
+      "Constructora": "INVERSIONES CROAR, S.R.L.",
+      "Fiduciaria": "FIDUCIARIA LA NACIONAL,S.A.",
+      " Costo del Proyecto ": "1276102564.26",
+      "Â¿Aprobado?": "sustituido"
     },
     {
       "AÃ±o": "2025",
@@ -11405,6 +11900,18 @@ window.MIVHED_DATA = {
       "Constructora": "HARBOUR CIUDAD ECOLÃ“GICA, S.R.L.",
       "Fiduciaria": "FIDUCORP, SERVICIOS FIDUCIARIOS CORPORATIVOS S.A.",
       " Costo del Proyecto ": "24575158300.37",
+      "Â¿Aprobado?": "sustituido"
+    },
+    {
+      "AÃ±o": "2025",
+      "Fecha de Entrada": "8/11/25",
+      "Fecha de Salida": "8/12/25",
+      "Proyecto": "HATO NUEVO VI, MI VIVIENDA",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Santo Domingo Oeste",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A.",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      " Costo del Proyecto ": "1194960167.31",
       "Â¿Aprobado?": "sustituido"
     },
     {
@@ -12029,6 +12536,18 @@ window.MIVHED_DATA = {
       "Unidades": "216",
       " Costo del Proyecto ": "561679510",
       "CompensaciÃ³n": "59140409.92"
+    },
+    {
+      "AÃ±o": "2026",
+      "Fecha de Entrada": "7/10/24",
+      "Fecha de Salida": "1/12/26",
+      "Proyecto": "RESIDENCIAL PABLO MELLA IV, PROGRAMA DE SUBSIDIO DE VIVIENDAS",
+      "Provincia": "Santo Domingo",
+      "Municipio": "Pedro Brand",
+      "Constructora": "CONSTRUCTORA BISONÃ“, S.A",
+      "Fiduciaria": "FIDUCORP, S.A.",
+      " Costo del Proyecto ": "8377092198",
+      "Â¿Aprobado?": "sustituido"
     },
     {
       "AÃ±o": "2026",
